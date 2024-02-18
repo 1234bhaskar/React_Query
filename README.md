@@ -64,3 +64,8 @@ For example, if you have a list of posts that changes infrequently, you could sp
 <p>After a refresh it is updated</p>
 
 <img width="719" alt="Screenshot 2024-02-18 180912" src="https://github.com/1234bhaskar/React_Query/assets/104014529/a0a13de0-6fd4-4f1a-952c-1dad5da4114b">
+
+<h1>Final</h1>
+
+<img width="944" alt="Screenshot 2024-02-18 191139" src="https://github.com/1234bhaskar/React_Query/assets/104014529/68a5eefd-7ecb-47ef-9ce0-203c5d279125">
+

@@ -8,14 +8,15 @@ export default function PostsList() {
 const {data:postData,isError,isLoading,error} = useQuery({
 queryKey:["posts"],
 queryFn:fetchposts,
-staleTime:5000
+gcTime:0,
+//staleTime:5000
 });
 
 //tags Fetch
 const {data:tagsData} = useQuery({
 queryKey:["tags"],
 queryFn:fetchTags,
-//staleTime:5000
+staleTime:Infinity
 });
 
 

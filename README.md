@@ -31,3 +31,21 @@ Once you grasp the nature of server state in your application, even more challen
 <li>Memoizing query results with structural sharing</li>
 <br/>
 <b>For more Info</b> visit (https://tanstack.com/query/latest)
+
+
+<h1>useQuery</h1>
+<p>For fetching Data from our Server in our react App</p>
+<img width="424" alt="Screenshot 2024-02-18 154317" src="https://github.com/1234bhaskar/React_Query/assets/104014529/0d8d8e52-359a-4912-8a86-403fb7673ccf">
+<h1>staleTime</h1>
+
+<p>
+ <header>Stale time can be useful for a number of reasons:</header>
+<li>Improves performance: By specifying a stale time, you can improve the performance of your application by reducing the number of network requests that are made.
+For example, if you have a list of posts that changes infrequently, you could specify a stale time of 60 seconds. This would mean that React Query would only fetch the data from the server if it has been more than 60 seconds since the data was last fetched.</li>
+<li>Reduces load on the server: By specifying a stale time, you can also help to reduce the load on your server by reducing the number of requests that are made</li>
+</p>
+
+<img width="960" alt="Screenshot 2024-02-18 153308" src="https://github.com/1234bhaskar/React_Query/assets/104014529/2b81acd7-45ba-4bcd-ba62-6245547fbf48">
+
+<img width="936" alt="Screenshot 2024-02-18 153403" src="https://github.com/1234bhaskar/React_Query/assets/104014529/75e4abdd-ccce-462c-8cf5-257b0153013a">
+

@@ -25,3 +25,25 @@ body{
     border-radius: 15px;
     color: black;
 }
+.tags{   
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px 0;
+}
+form > input{
+ width: 20%;
+ margin: auto;
+}
+form > button{
+background-color:rgb(212, 84, 240) ;
+color: white;
+border: none;
+width: 5%;
+padding: 10px;
+margin: 20px auto;
+}
+form{
+display: flex;
+flex-direction: column;
+justify-content: center;
+}

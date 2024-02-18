@@ -5,7 +5,8 @@ import fetchposts  from '../api/api.js';
 export default function PostsList() {
 const {data:postData,isError,isLoading,error} = useQuery({
 queryKey:["posts"],
-queryFn:fetchposts
+queryFn:fetchposts,
+staleTime:5000
 });
     //console.log(data,isLoading,status);
 
@@ -21,7 +22,7 @@ queryFn:fetchposts
                     <div key={post.id} className='posts' >
                         <div>{post.title}</div>
                         {post.tags.map((tag)=>(
-                                <span key={tag}>{tag}</span>   
+                            <span key={tag}>{tag}</span>   
                         ))
                         }
                     </div>

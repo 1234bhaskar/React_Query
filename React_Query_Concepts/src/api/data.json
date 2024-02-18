@@ -265,6 +265,15 @@
         "english",
         "fiction"
       ]
+    },
+    {
+      "id": 33,
+      "title": "post3",
+      "tags": [
+        "english",
+        "fiction",
+        "french"
+      ]
     }
   ],
   "tags": [

@@ -1,9 +1,10 @@
-import {useMutation, useQuery}  from '@tanstack/react-query'
+import {QueryClient, useMutation, useQuery, useQueryClient}  from '@tanstack/react-query'
 import React, { useEffect } from 'react'
 import {fetchposts, addPost, fetchTags }  from '../api/api.js';
 
 
 export default function PostsList() {
+    const queryClient=useQueryClient();
 const {data:postData,isError,isLoading,error} = useQuery({
 queryKey:["posts"],
 queryFn:fetchposts,
@@ -21,6 +22,12 @@ queryFn:fetchTags,
 //Post Data
 const {mutate,isError:isPostError,isPending,error:postError,reset}=useMutation({
     mutationFn:addPost,
+    onSuccess:(data,variables,context)=>{
+        queryClient.invalidateQueries({
+            queryKey:['posts'],
+            exact:true,
+        })
+    }
     
 })
     //console.log(data,isLoading,status);
@@ -60,9 +67,12 @@ const {mutate,isError:isPostError,isPending,error:postError,reset}=useMutation({
             <button >Post</button>
         </form>
 
-        {isLoading && <p>...Loading</p>}
+        {isLoading && isPending && <p>...Loading</p>}
         {
             isError && <p>{error?.message}</p>
+        }
+        {
+            isPostError && <p>{"Unable to post"+postError?.message}</p>
         }
 
         {postData?.map((post)=>{

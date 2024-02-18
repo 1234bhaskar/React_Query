@@ -39,10 +39,15 @@ const {mutate,isError:isPostError,isPending,error:postError,reset}=useMutation({
         const tags=Array.from(formData.keys()).filter((key)=>formData.get(key)==='on');
 
        // console.log(title,tags);
-         if(!title ||!tags) return;
+         if(!title ||!tags)
+         {
+            return;
+         }else{
 
-         mutate({id:postData.length+1,title,tags})
-         e.target.reset();
+             
+             mutate({id:postData.length+1,title,tags})
+             e.target.reset();
+            }
 
     }
 
@@ -72,7 +77,7 @@ const {mutate,isError:isPostError,isPending,error:postError,reset}=useMutation({
             isError && <p>{error?.message}</p>
         }
         {
-            isPostError && <p>{"Unable to post"+postError?.message}</p>
+            isPostError && <p style={{cursor:"pointer"}} onClick={()=>reset()}>{"Unable to post"}</p>
         }
 
         {postData?.map((post)=>{

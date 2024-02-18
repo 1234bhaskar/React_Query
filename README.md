@@ -44,8 +44,23 @@ Once you grasp the nature of server state in your application, even more challen
 For example, if you have a list of posts that changes infrequently, you could specify a stale time of 60 seconds. This would mean that React Query would only fetch the data from the server if it has been more than 60 seconds since the data was last fetched.</li>
 <li>Reduces load on the server: By specifying a stale time, you can also help to reduce the load on your server by reducing the number of requests that are made</li>
 </p>
+<img width="941" alt="Screenshot 2024-02-18 153308" src="https://github.com/1234bhaskar/React_Query/assets/104014529/1a81e78a-4ee3-4e9f-a391-8f036a397706">
 
-<img width="960" alt="Screenshot 2024-02-18 153308" src="https://github.com/1234bhaskar/React_Query/assets/104014529/2b81acd7-45ba-4bcd-ba62-6245547fbf48">
+
 
 <img width="936" alt="Screenshot 2024-02-18 153403" src="https://github.com/1234bhaskar/React_Query/assets/104014529/75e4abdd-ccce-462c-8cf5-257b0153013a">
 
+<br/>
+
+<h1>useMutation</h1>
+<p>For updating data we use useMutation</p>
+
+<img width="704" alt="Screenshot 2024-02-18 180841" src="https://github.com/1234bhaskar/React_Query/assets/104014529/13bc57d9-49f7-4e13-8bee-f7e6a99d3a7b">
+
+<p>List is Updated but Not showing  </p>
+
+<img width="744" alt="Screenshot 2024-02-18 180858" src="https://github.com/1234bhaskar/React_Query/assets/104014529/2feee63d-92a2-4a2e-9327-47c122238e96">
+
+<p>After a refresh it is updated</p>
+
+<img width="719" alt="Screenshot 2024-02-18 180912" src="https://github.com/1234bhaskar/React_Query/assets/104014529/a0a13de0-6fd4-4f1a-952c-1dad5da4114b">

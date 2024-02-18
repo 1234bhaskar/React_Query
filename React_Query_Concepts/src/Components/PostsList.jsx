@@ -10,7 +10,7 @@ queryFn:fetchposts
     //console.log(data,isLoading,status);
 
   return (
-    <div className='Container'>
+    <div className='container'>
         {isLoading && <p>...Loading</p>}
         {
             isError && <p>{error?.message}</p>
@@ -20,11 +20,10 @@ queryFn:fetchposts
                 return(
                     <div key={post.id} className='posts' >
                         <div>{post.title}</div>
-                        {post.tags.map((tag)=>{
-                                <span key={tag}>{tag}</span>
-                            })
+                        {post.tags.map((tag)=>(
+                                <span key={tag}>{tag}</span>   
+                        ))
                         }
-
                     </div>
 
                 )
